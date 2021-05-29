@@ -16,14 +16,21 @@ public class MainActivity extends AppCompatActivity {
         openFirstFragment(0);
     }
 
-    private void openFirstFragment(int previousNumber) {
+    public void openFirstFragment(int previousNumber) {
         final Fragment firstFragment = FirstFragment.newInstance(previousNumber);
         final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.container, firstFragment);
         // TODO: invoke function which apply changes of the transaction
+        transaction.setReorderingAllowed(true);
+        transaction.commit();
     }
 
-    private void openSecondFragment(int min, int max) {
+    public void openSecondFragment(int min, int max) {
+        final Fragment secondFragment = SecondFragment.newInstance(min, max);
+        final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, secondFragment);
+        transaction.setReorderingAllowed(true);
+        transaction.commit();
         // TODO: implement it
     }
 }

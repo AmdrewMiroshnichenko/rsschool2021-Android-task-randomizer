@@ -6,5 +6,12 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" >
+
+        <fragment
+            android:name="com.rsschool.android2021.FirstFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.fragment.app.FragmentContainerView>
 </FrameLayout>
