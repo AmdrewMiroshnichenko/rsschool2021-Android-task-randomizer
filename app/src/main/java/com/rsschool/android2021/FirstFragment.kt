@@ -42,7 +42,7 @@ class FirstFragment : Fragment() {
             if (minValue.text.isEmpty() == true || maxValue.text.isEmpty() == true){                // Check fields are not empty
                 Snackbar.make(view, "Please, fill both fields", Snackbar.LENGTH_SHORT).show()
             } else if (maxValue.text.toString().toInt() <= minValue.text.toString().toInt()) {
-                Snackbar.make(view, "Max value mast be more than min value", Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(view, "Max value must be more than min value", Snackbar.LENGTH_SHORT).show()
             } else {
                 min = minValue.text.toString().toInt()
                 max = maxValue.text.toString().toInt()
